@@ -1,0 +1,88 @@
+{
+  "repository_name": ".codeboarding-target",
+  "timestamp": "2026-09-29T17:48:35.728885+00:00",
+  "overall_score": 0.9777777777777779,
+  "check_summaries": [
+    {
+      "check_name": "function_size",
+      "description": "Checks that functions/methods do not exceed line count thresholds",
+      "languages": [],
+      "check_type": "standard",
+      "total_entities_checked": 32,
+      "findings_count": 0,
+      "warning_count": 0,
+      "score": 1.0,
+      "finding_groups": []
+    },
+    {
+      "check_name": "circular_dependencies",
+      "description": "Detects circular dependencies between packages",
+      "languages": [],
+      "check_type": "circular_dependencies",
+      "cycles": [],
+      "packages_checked": 4,
+      "packages_in_cycles": 0
+    },
+    {
+      "check_name": "unused_code_diagnostics",
+      "description": "Detects unused imports, variables, functions, and dead code via LSP diagnostics",
+      "languages": [],
+      "check_type": "standard",
+      "total_entities_checked": 4,
+      "findings_count": 4,
+      "warning_count": 4,
+      "score": 0.8,
+      "finding_groups": [
+        {
+          "severity": "warning",
+          "threshold": 0,
+          "description": "Unused import statements that should be removed",
+          "entities": [
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Services/RecursiveTextSplitter.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Services/DocumentTextExtractor.cs",
+              "line_start": 1,
+              "line_end": 1,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Services/DocumentTextExtractor.cs",
+              "line_start": 3,
+              "line_end": 3,
+              "metric_value": 0.0
+            },
+            {
+              "entity_name": "[unused_import] Unnecessary using directive.",
+              "file_path": "Services/DocumentTextExtractor.cs",
+              "line_start": 7,
+              "line_end": 7,
+              "metric_value": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "file_summaries": [
+    {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "total_findings": 3,
+      "warning_findings": 3,
+      "composite_risk_score": 45.0
+    },
+    {
+      "file_path": "Services/RecursiveTextSplitter.cs",
+      "total_findings": 1,
+      "warning_findings": 1,
+      "composite_risk_score": 15.0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "appsettings.json": "c8efc6f77ac06128",
+    "Program.cs": "9c2267a98b903dd1",
+    "RagApi.http": "06c87ab90be6b821",
+    "RagApi.csproj": "93937712122c05c6",
+    "RagApi.sln": "e591095695a2a6d4",
+    "Models/Models.cs": "d5b412f847bdabd1",
+    "Properties/launchSettings.json": "e3610cf3d3909f83",
+    "Services/RagPrompts.cs": "f5a50ce65fda0c09",
+    "Services/RagService.cs": "60db68d4fc71fefb",
+    "Services/VectorStoreService.cs": "f638bf7da7fd5119",
+    "Services/EvaluationService.cs": "a6cbf4fdf745a7f1",
+    "Services/DocumentTextExtractor.cs": "090cffceecfd8cb4",
+    "Services/EmbeddingService.cs": "e2ebe256d0c6fff0",
+    "Services/RecursiveTextSplitter.cs": "7920e3ca2a08864e",
+    "Services/IngestionService.cs": "6f9151624a0db047",
+    "Controllers/QuestionsController.cs": "a4ff84ad9ed7c9b0",
+    "Controllers/DocumentsController.cs": "d4337998cd064e89",
+    "Controllers/EvaluationController.cs": "b02275d6f809bb09",
+    "Options/Options.cs": "4cc58c9490000095"
+  }
+}

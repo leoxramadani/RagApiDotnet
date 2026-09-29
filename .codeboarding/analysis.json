@@ -1,0 +1,2292 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-29T17:49:13.363086+00:00",
+    "source_tree_hash": "02b3d50bb0de4da6bf82cbdc23ae47d8482b2424e0c693e5aa8a7125529ca75d",
+    "repo_name": ".codeboarding-target",
+    "depth_level": 2,
+    "depth_cap": 2,
+    "file_coverage_summary": {
+      "total_files": 18,
+      "analyzed": 14,
+      "not_analyzed": 4,
+      "not_analyzed_by_reason": {
+        "other": 4
+      }
+    },
+    "tree_spec": {
+      "version": 4,
+      "grouper": "affinity",
+      "machinery": [],
+      "scopes": {
+        "root": {
+          "axis": "structural",
+          "rung": "frontier",
+          "leaf_reason": "",
+          "last_id": 3,
+          "rules": [
+            {
+              "id": "1",
+              "name": "Services",
+              "origin": "box",
+              "prefixes": [
+                [
+                  "Services"
+                ]
+              ]
+            },
+            {
+              "id": "2",
+              "name": "Controllers",
+              "origin": "box",
+              "prefixes": [
+                [
+                  "Controllers"
+                ]
+              ]
+            },
+            {
+              "id": "3",
+              "name": "Loose files",
+              "origin": "loose",
+              "fallback_prefixes": [
+                []
+              ]
+            }
+          ]
+        },
+        "1": {
+          "axis": "files",
+          "rung": "files",
+          "leaf_reason": "",
+          "last_id": 3,
+          "rules": [
+            {
+              "id": "1.1",
+              "name": "EmbeddingService",
+              "origin": "grouped",
+              "prefixes": [
+                [
+                  "Services",
+                  "IngestionService.cs"
+                ],
+                [
+                  "Services",
+                  "DocumentTextExtractor.cs"
+                ],
+                [
+                  "Services",
+                  "EmbeddingService.cs"
+                ],
+                [
+                  "Services",
+                  "RecursiveTextSplitter.cs"
+                ]
+              ],
+              "terms": [
+                "ingestion",
+                "document",
+                "embedd",
+                "recursive"
+              ],
+              "parts": [
+                {
+                  "id": "",
+                  "name": "IngestionService",
+                  "origin": "file",
+                  "prefixes": [
+                    [
+                      "Services",
+                      "IngestionService.cs"
+                    ]
+                  ]
+                },
+                {
+                  "id": "",
+                  "name": "DocumentTextExtractor",
+                  "origin": "file",
+                  "prefixes": [
+                    [
+                      "Services",
+                      "DocumentTextExtractor.cs"
+                    ]
+                  ]
+                },
+                {
+                  "id": "",
+                  "name": "EmbeddingService",
+                  "origin": "file",
+                  "prefixes": [
+                    [
+                      "Services",
+                      "EmbeddingService.cs"
+                    ]
+                  ]
+                },
+                {
+                  "id": "",
+                  "name": "RecursiveTextSplitter",
+                  "origin": "file",
+                  "prefixes": [
+                    [
+                      "Services",
+                      "RecursiveTextSplitter.cs"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.2",
+              "name": "RagService",
+              "origin": "grouped",
+              "prefixes": [
+                [
+                  "Services",
+                  "RagPrompts.cs"
+                ],
+                [
+                  "Services",
+                  "RagService.cs"
+                ],
+                [
+                  "Services",
+                  "VectorStoreService.cs"
+                ]
+              ],
+              "terms": [
+                "rag",
+                "vector"
+              ],
+              "parts": [
+                {
+                  "id": "",
+                  "name": "RagPrompts",
+                  "origin": "file",
+                  "prefixes": [
+                    [
+                      "Services",
+                      "RagPrompts.cs"
+                    ]
+                  ]
+                },
+                {
+                  "id": "",
+                  "name": "RagService",
+                  "origin": "file",
+                  "prefixes": [
+                    [
+                      "Services",
+                      "RagService.cs"
+                    ]
+                  ]
+                },
+                {
+                  "id": "",
+                  "name": "VectorStoreService",
+                  "origin": "file",
+                  "prefixes": [
+                    [
+                      "Services",
+                      "VectorStoreService.cs"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.3",
+              "name": "Loose files",
+              "origin": "loose",
+              "fallback_prefixes": [
+                [
+                  "Services"
+                ]
+              ]
+            }
+          ]
+        },
+        "2": {
+          "axis": "",
+          "rung": "leaf",
+          "leaf_reason": "small: 3 units, at most 7; nothing to un-merge",
+          "last_id": 0,
+          "rules": []
+        },
+        "3": {
+          "axis": "",
+          "rung": "leaf",
+          "leaf_reason": "small: 2 units, at most 7; nothing to un-merge",
+          "last_id": 0,
+          "rules": []
+        },
+        "1.1": {
+          "axis": "",
+          "rung": "leaf",
+          "leaf_reason": "small: 4 units, at most 7; un-merge failed the guard",
+          "last_id": 0,
+          "rules": []
+        },
+        "1.2": {
+          "axis": "",
+          "rung": "leaf",
+          "leaf_reason": "small: 3 units, at most 7; un-merge failed the guard",
+          "last_id": 0,
+          "rules": []
+        },
+        "1.3": {
+          "axis": "",
+          "rung": "leaf",
+          "leaf_reason": "small: 1 units, at most 7; nothing to un-merge",
+          "last_id": 0,
+          "rules": []
+        }
+      }
+    }
+  },
+  "description": "RAG API system facilitating document ingestion, chunking and embedding indexing in Qdrant, question answering with OpenAI models, and automated evaluation benchmarking.",
+  "files": {
+    "Services/DocumentTextExtractor.cs": {
+      "method_keys": [
+        "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.IDocumentTextExtractor",
+        "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.IDocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+        "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor",
+        "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+        "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractPdf(Stream stream)",
+        "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractExcel(Stream stream)",
+        "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.DecodeText(byte[] bytes)"
+      ],
+      "content_hash": "090cffceecfd8cb4",
+      "module_hash": "f108a3cd61e1a5d8"
+    },
+    "Services/EmbeddingService.cs": {
+      "method_keys": [
+        "Services/EmbeddingService.cs|Services.EmbeddingService",
+        "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+        "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedBatchAsync(IReadOnlyList<string> texts, CancellationToken ctx = default(CancellationToken))"
+      ],
+      "content_hash": "e2ebe256d0c6fff0",
+      "module_hash": "e01a197335832139"
+    },
+    "Services/EvaluationService.cs": {
+      "method_keys": [
+        "Services/EvaluationService.cs|Services.EvaluationService",
+        "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+        "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)"
+      ],
+      "content_hash": "a6cbf4fdf745a7f1",
+      "module_hash": "697957b59622097e"
+    },
+    "Services/IngestionService.cs": {
+      "method_keys": [
+        "Services/IngestionService.cs|Services.IngestionService",
+        "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)"
+      ],
+      "content_hash": "6f9151624a0db047",
+      "module_hash": "4f50e1bc5c661d2d"
+    },
+    "Services/RagPrompts.cs": {
+      "method_keys": [
+        "Services/RagPrompts.cs|Services.RagPrompts",
+        "Services/RagPrompts.cs|Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+        "Services/RagPrompts.cs|Services.RagPrompts.BuildUserMessage(string context, string question)",
+        "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)"
+      ],
+      "content_hash": "f5a50ce65fda0c09",
+      "module_hash": "4f50e1bc5c661d2d"
+    },
+    "Services/RagService.cs": {
+      "method_keys": [
+        "Services/RagService.cs|Services.RagService",
+        "Services/RagService.cs|Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+        "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+        "Services/RagService.cs|Services.RagService.GenerateAsync(string question, IReadOnlyList<RetrievedChunk> chunks, string model, float temperature, CancellationToken ct)"
+      ],
+      "content_hash": "60db68d4fc71fefb",
+      "module_hash": "5322d789f16368d0"
+    },
+    "Services/RecursiveTextSplitter.cs": {
+      "method_keys": [
+        "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter",
+        "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.Split(string text, int chunkSize, int overlap)",
+        "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.SplitRecursive(string text, string[] separators, int chunkSize, int overlap)",
+        "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.Merge(List<string> splits, string separator, int chunkSize, int overlap)",
+        "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.AddDoc(List<string> docs, List<string> current, string separator)"
+      ],
+      "content_hash": "7920e3ca2a08864e",
+      "module_hash": "afda88b518381bd9"
+    },
+    "Services/VectorStoreService.cs": {
+      "method_keys": [
+        "Services/VectorStoreService.cs|Services.VectorStoreService",
+        "Services/VectorStoreService.cs|Services.VectorStoreService.EnsureCollectionAsync(CancellationToken ct)",
+        "Services/VectorStoreService.cs|Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+        "Services/VectorStoreService.cs|Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+        "Services/VectorStoreService.cs|Services.VectorStoreService.SearchAsync(float[] vector, int topK, CancellationToken ct)",
+        "Services/VectorStoreService.cs|Services.VectorStoreService.GetStatsAsync(CancellationToken ct)",
+        "Services/VectorStoreService.cs|Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)"
+      ],
+      "content_hash": "f638bf7da7fd5119",
+      "module_hash": "7a0842538491b1cc"
+    },
+    "Controllers/DocumentsController.cs": {
+      "method_keys": [
+        "Controllers/DocumentsController.cs|Controllers.DocumentsController",
+        "Controllers/DocumentsController.cs|Controllers.DocumentsController.Upload(UploadDocumentRequest request, CancellationToken ct)",
+        "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)",
+        "Controllers/DocumentsController.cs|Controllers.DocumentsController.Delete(string documentId, CancellationToken ct)"
+      ],
+      "content_hash": "d4337998cd064e89",
+      "module_hash": "b15cc764a3c99b38"
+    },
+    "Controllers/EvaluationController.cs": {
+      "method_keys": [
+        "Controllers/EvaluationController.cs|Controllers.EvaluationController",
+        "Controllers/EvaluationController.cs|Controllers.EvaluationController.Run(List<EvalCase> cases, int topK = 5, CancellationToken ct = default(CancellationToken))"
+      ],
+      "content_hash": "b02275d6f809bb09",
+      "module_hash": "3caee5ea72e8335f"
+    },
+    "Controllers/QuestionsController.cs": {
+      "method_keys": [
+        "Controllers/QuestionsController.cs|Controllers.QuestionsController",
+        "Controllers/QuestionsController.cs|Controllers.QuestionsController.Ask(AskRequest request, CancellationToken ct)"
+      ],
+      "content_hash": "a4ff84ad9ed7c9b0",
+      "module_hash": "44418035b8439dae"
+    },
+    "Models/Models.cs": {
+      "method_keys": [
+        "Models/Models.cs|Models.Models.RetrievedChunk",
+        "Models/Models.cs|Models.Models.CollectionStats",
+        "Models/Models.cs|Models.Models.ExtractedDocument",
+        "Models/Models.cs|Models.Models.UploadDocumentRequest",
+        "Models/Models.cs|Models.Models.UploadResponse",
+        "Models/Models.cs|Models.Models.IndexedDocument",
+        "Models/Models.cs|Models.Models.DocumentListResponse",
+        "Models/Models.cs|Models.Models.AskRequest",
+        "Models/Models.cs|Models.Models.SourceInfo",
+        "Models/Models.cs|Models.Models.AskResponse",
+        "Models/Models.cs|Models.Models.EvalCase",
+        "Models/Models.cs|Models.Models.EvalCaseResult",
+        "Models/Models.cs|Models.Models.EvalReport",
+        "Models/Models.cs|Models.Models.EmptyKnowledgeBaseException",
+        "Models/Models.cs|Models.Models.EmptyKnowledgeBaseException.EmptyKnowledgeBaseException()"
+      ],
+      "content_hash": "d5b412f847bdabd1",
+      "module_hash": "9c8ac4e3d872c803"
+    },
+    "Options/Options.cs": {
+      "method_keys": [
+        "Options/Options.cs|Options.Options.OpenAiOptions",
+        "Options/Options.cs|Options.Options.QdrantOptions",
+        "Options/Options.cs|Options.Options.RagOptions"
+      ],
+      "content_hash": "4cc58c9490000095",
+      "module_hash": "0c2c1a6b4cbb067e"
+    }
+  },
+  "methods_index": {
+    "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.IDocumentTextExtractor": {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "qualified_name": "Services.DocumentTextExtractor.IDocumentTextExtractor",
+      "start_line": 12,
+      "end_line": 16,
+      "type": "INTERFACE",
+      "content_hash": "6de9a404acc4fe76"
+    },
+    "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.IDocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)": {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "qualified_name": "Services.DocumentTextExtractor.IDocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+      "start_line": 14,
+      "end_line": 15,
+      "type": "METHOD",
+      "content_hash": "b3ff655fa5ef3759"
+    },
+    "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor": {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "qualified_name": "Services.DocumentTextExtractor.DocumentTextExtractor",
+      "start_line": 17,
+      "end_line": 80,
+      "type": "CLASS",
+      "content_hash": "4f0e6fb4b66f15a2"
+    },
+    "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)": {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "qualified_name": "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+      "start_line": 21,
+      "end_line": 36,
+      "type": "METHOD",
+      "content_hash": "a29cd82fa3c805fb"
+    },
+    "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractPdf(Stream stream)": {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "qualified_name": "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractPdf(Stream stream)",
+      "start_line": 37,
+      "end_line": 49,
+      "type": "METHOD",
+      "content_hash": "4d4f88652a96d6be"
+    },
+    "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractExcel(Stream stream)": {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "qualified_name": "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractExcel(Stream stream)",
+      "start_line": 50,
+      "end_line": 73,
+      "type": "METHOD",
+      "content_hash": "9cb60cd2171c0fba"
+    },
+    "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.DecodeText(byte[] bytes)": {
+      "file_path": "Services/DocumentTextExtractor.cs",
+      "qualified_name": "Services.DocumentTextExtractor.DocumentTextExtractor.DecodeText(byte[] bytes)",
+      "start_line": 74,
+      "end_line": 79,
+      "type": "METHOD",
+      "content_hash": "bbf025c186b046a6"
+    },
+    "Services/EmbeddingService.cs|Services.EmbeddingService": {
+      "file_path": "Services/EmbeddingService.cs",
+      "qualified_name": "Services.EmbeddingService",
+      "start_line": 8,
+      "end_line": 28,
+      "type": "CLASS",
+      "content_hash": "7edb1fd13c8fd29b"
+    },
+    "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))": {
+      "file_path": "Services/EmbeddingService.cs",
+      "qualified_name": "Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+      "start_line": 12,
+      "end_line": 17,
+      "type": "METHOD",
+      "content_hash": "751babdd67d50d06"
+    },
+    "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedBatchAsync(IReadOnlyList<string> texts, CancellationToken ctx = default(CancellationToken))": {
+      "file_path": "Services/EmbeddingService.cs",
+      "qualified_name": "Services.EmbeddingService.EmbedBatchAsync(IReadOnlyList<string> texts, CancellationToken ctx = default(CancellationToken))",
+      "start_line": 18,
+      "end_line": 28,
+      "type": "METHOD",
+      "content_hash": "c71b7099d6f953b9"
+    },
+    "Services/EvaluationService.cs|Services.EvaluationService": {
+      "file_path": "Services/EvaluationService.cs",
+      "qualified_name": "Services.EvaluationService",
+      "start_line": 10,
+      "end_line": 119,
+      "type": "CLASS",
+      "content_hash": "a9a65eb7f6db27ae"
+    },
+    "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)": {
+      "file_path": "Services/EvaluationService.cs",
+      "qualified_name": "Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+      "start_line": 34,
+      "end_line": 92,
+      "type": "METHOD",
+      "content_hash": "a13c31de00301ad1"
+    },
+    "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)": {
+      "file_path": "Services/EvaluationService.cs",
+      "qualified_name": "Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)",
+      "start_line": 93,
+      "end_line": 119,
+      "type": "METHOD",
+      "content_hash": "f5eb9a7ca39b4383"
+    },
+    "Services/IngestionService.cs|Services.IngestionService": {
+      "file_path": "Services/IngestionService.cs",
+      "qualified_name": "Services.IngestionService",
+      "start_line": 5,
+      "end_line": 30,
+      "type": "CLASS",
+      "content_hash": "54d5d912e21a666b"
+    },
+    "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)": {
+      "file_path": "Services/IngestionService.cs",
+      "qualified_name": "Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+      "start_line": 9,
+      "end_line": 30,
+      "type": "METHOD",
+      "content_hash": "f45b1dfef7fa5f60"
+    },
+    "Services/RagPrompts.cs|Services.RagPrompts": {
+      "file_path": "Services/RagPrompts.cs",
+      "qualified_name": "Services.RagPrompts",
+      "start_line": 5,
+      "end_line": 30,
+      "type": "CLASS",
+      "content_hash": "049b04fd24128705"
+    },
+    "Services/RagPrompts.cs|Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)": {
+      "file_path": "Services/RagPrompts.cs",
+      "qualified_name": "Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+      "start_line": 21,
+      "end_line": 24,
+      "type": "METHOD",
+      "content_hash": "87762d20eb8addaa"
+    },
+    "Services/RagPrompts.cs|Services.RagPrompts.BuildUserMessage(string context, string question)": {
+      "file_path": "Services/RagPrompts.cs",
+      "qualified_name": "Services.RagPrompts.BuildUserMessage(string context, string question)",
+      "start_line": 25,
+      "end_line": 27,
+      "type": "METHOD",
+      "content_hash": "8c5339795fcb5e7e"
+    },
+    "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)": {
+      "file_path": "Services/RagPrompts.cs",
+      "qualified_name": "Services.RagPrompts.IsFallback(string answer)",
+      "start_line": 28,
+      "end_line": 30,
+      "type": "METHOD",
+      "content_hash": "ae85bc7ce258a744"
+    },
+    "Services/RagService.cs|Services.RagService": {
+      "file_path": "Services/RagService.cs",
+      "qualified_name": "Services.RagService",
+      "start_line": 9,
+      "end_line": 57,
+      "type": "CLASS",
+      "content_hash": "88a908f81bc1b5f4"
+    },
+    "Services/RagService.cs|Services.RagService.AskAsync(AskRequest req, CancellationToken ct)": {
+      "file_path": "Services/RagService.cs",
+      "qualified_name": "Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+      "start_line": 13,
+      "end_line": 27,
+      "type": "METHOD",
+      "content_hash": "8218201c27ce91c4"
+    },
+    "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)": {
+      "file_path": "Services/RagService.cs",
+      "qualified_name": "Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+      "start_line": 28,
+      "end_line": 34,
+      "type": "METHOD",
+      "content_hash": "b271772650566235"
+    },
+    "Services/RagService.cs|Services.RagService.GenerateAsync(string question, IReadOnlyList<RetrievedChunk> chunks, string model, float temperature, CancellationToken ct)": {
+      "file_path": "Services/RagService.cs",
+      "qualified_name": "Services.RagService.GenerateAsync(string question, IReadOnlyList<RetrievedChunk> chunks, string model, float temperature, CancellationToken ct)",
+      "start_line": 35,
+      "end_line": 57,
+      "type": "METHOD",
+      "content_hash": "0a6a6b4c9f2bbc73"
+    },
+    "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter": {
+      "file_path": "Services/RecursiveTextSplitter.cs",
+      "qualified_name": "Services.RecursiveTextSplitter",
+      "start_line": 4,
+      "end_line": 83,
+      "type": "CLASS",
+      "content_hash": "9d5e1d40a23d3804"
+    },
+    "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.Split(string text, int chunkSize, int overlap)": {
+      "file_path": "Services/RecursiveTextSplitter.cs",
+      "qualified_name": "Services.RecursiveTextSplitter.Split(string text, int chunkSize, int overlap)",
+      "start_line": 8,
+      "end_line": 13,
+      "type": "METHOD",
+      "content_hash": "67c886d9a14d89cf"
+    },
+    "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.SplitRecursive(string text, string[] separators, int chunkSize, int overlap)": {
+      "file_path": "Services/RecursiveTextSplitter.cs",
+      "qualified_name": "Services.RecursiveTextSplitter.SplitRecursive(string text, string[] separators, int chunkSize, int overlap)",
+      "start_line": 14,
+      "end_line": 49,
+      "type": "METHOD",
+      "content_hash": "055a48d911416a5c"
+    },
+    "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.Merge(List<string> splits, string separator, int chunkSize, int overlap)": {
+      "file_path": "Services/RecursiveTextSplitter.cs",
+      "qualified_name": "Services.RecursiveTextSplitter.Merge(List<string> splits, string separator, int chunkSize, int overlap)",
+      "start_line": 50,
+      "end_line": 75,
+      "type": "METHOD",
+      "content_hash": "c5a77ea75a3e81ea"
+    },
+    "Services/RecursiveTextSplitter.cs|Services.RecursiveTextSplitter.AddDoc(List<string> docs, List<string> current, string separator)": {
+      "file_path": "Services/RecursiveTextSplitter.cs",
+      "qualified_name": "Services.RecursiveTextSplitter.AddDoc(List<string> docs, List<string> current, string separator)",
+      "start_line": 76,
+      "end_line": 81,
+      "type": "METHOD",
+      "content_hash": "49a4c174807dc825"
+    },
+    "Services/VectorStoreService.cs|Services.VectorStoreService": {
+      "file_path": "Services/VectorStoreService.cs",
+      "qualified_name": "Services.VectorStoreService",
+      "start_line": 9,
+      "end_line": 122,
+      "type": "CLASS",
+      "content_hash": "2264b16c80f7c7fe"
+    },
+    "Services/VectorStoreService.cs|Services.VectorStoreService.EnsureCollectionAsync(CancellationToken ct)": {
+      "file_path": "Services/VectorStoreService.cs",
+      "qualified_name": "Services.VectorStoreService.EnsureCollectionAsync(CancellationToken ct)",
+      "start_line": 13,
+      "end_line": 39,
+      "type": "METHOD",
+      "content_hash": "2b5d8b6559d42f56"
+    },
+    "Services/VectorStoreService.cs|Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)": {
+      "file_path": "Services/VectorStoreService.cs",
+      "qualified_name": "Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+      "start_line": 40,
+      "end_line": 59,
+      "type": "METHOD",
+      "content_hash": "9e3a0d06d1567835"
+    },
+    "Services/VectorStoreService.cs|Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)": {
+      "file_path": "Services/VectorStoreService.cs",
+      "qualified_name": "Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+      "start_line": 60,
+      "end_line": 76,
+      "type": "METHOD",
+      "content_hash": "9f8a11523b8e5497"
+    },
+    "Services/VectorStoreService.cs|Services.VectorStoreService.SearchAsync(float[] vector, int topK, CancellationToken ct)": {
+      "file_path": "Services/VectorStoreService.cs",
+      "qualified_name": "Services.VectorStoreService.SearchAsync(float[] vector, int topK, CancellationToken ct)",
+      "start_line": 77,
+      "end_line": 88,
+      "type": "METHOD",
+      "content_hash": "952cf945c1e37a39"
+    },
+    "Services/VectorStoreService.cs|Services.VectorStoreService.GetStatsAsync(CancellationToken ct)": {
+      "file_path": "Services/VectorStoreService.cs",
+      "qualified_name": "Services.VectorStoreService.GetStatsAsync(CancellationToken ct)",
+      "start_line": 88,
+      "end_line": 95,
+      "type": "METHOD",
+      "content_hash": "f5307a2f8d60215c"
+    },
+    "Services/VectorStoreService.cs|Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)": {
+      "file_path": "Services/VectorStoreService.cs",
+      "qualified_name": "Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)",
+      "start_line": 96,
+      "end_line": 122,
+      "type": "METHOD",
+      "content_hash": "e60d9282ed14a089"
+    },
+    "Controllers/DocumentsController.cs|Controllers.DocumentsController": {
+      "file_path": "Controllers/DocumentsController.cs",
+      "qualified_name": "Controllers.DocumentsController",
+      "start_line": 9,
+      "end_line": 55,
+      "type": "CLASS",
+      "content_hash": "c19f2855d3d8e0be"
+    },
+    "Controllers/DocumentsController.cs|Controllers.DocumentsController.Upload(UploadDocumentRequest request, CancellationToken ct)": {
+      "file_path": "Controllers/DocumentsController.cs",
+      "qualified_name": "Controllers.DocumentsController.Upload(UploadDocumentRequest request, CancellationToken ct)",
+      "start_line": 16,
+      "end_line": 38,
+      "type": "METHOD",
+      "content_hash": "d327a514645c9b03"
+    },
+    "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)": {
+      "file_path": "Controllers/DocumentsController.cs",
+      "qualified_name": "Controllers.DocumentsController.List(CancellationToken ct)",
+      "start_line": 41,
+      "end_line": 47,
+      "type": "METHOD",
+      "content_hash": "5ad0360b2172d0df"
+    },
+    "Controllers/DocumentsController.cs|Controllers.DocumentsController.Delete(string documentId, CancellationToken ct)": {
+      "file_path": "Controllers/DocumentsController.cs",
+      "qualified_name": "Controllers.DocumentsController.Delete(string documentId, CancellationToken ct)",
+      "start_line": 50,
+      "end_line": 55,
+      "type": "METHOD",
+      "content_hash": "288b4b8d995cb5b0"
+    },
+    "Controllers/EvaluationController.cs|Controllers.EvaluationController": {
+      "file_path": "Controllers/EvaluationController.cs",
+      "qualified_name": "Controllers.EvaluationController",
+      "start_line": 9,
+      "end_line": 19,
+      "type": "CLASS",
+      "content_hash": "51aa68e9c0a371c7"
+    },
+    "Controllers/EvaluationController.cs|Controllers.EvaluationController.Run(List<EvalCase> cases, int topK = 5, CancellationToken ct = default(CancellationToken))": {
+      "file_path": "Controllers/EvaluationController.cs",
+      "qualified_name": "Controllers.EvaluationController.Run(List<EvalCase> cases, int topK = 5, CancellationToken ct = default(CancellationToken))",
+      "start_line": 13,
+      "end_line": 19,
+      "type": "METHOD",
+      "content_hash": "ba998b81721bbc15"
+    },
+    "Controllers/QuestionsController.cs|Controllers.QuestionsController": {
+      "file_path": "Controllers/QuestionsController.cs",
+      "qualified_name": "Controllers.QuestionsController",
+      "start_line": 9,
+      "end_line": 29,
+      "type": "CLASS",
+      "content_hash": "0f615711e2be7811"
+    },
+    "Controllers/QuestionsController.cs|Controllers.QuestionsController.Ask(AskRequest request, CancellationToken ct)": {
+      "file_path": "Controllers/QuestionsController.cs",
+      "qualified_name": "Controllers.QuestionsController.Ask(AskRequest request, CancellationToken ct)",
+      "start_line": 14,
+      "end_line": 29,
+      "type": "METHOD",
+      "content_hash": "dd82e44e457f1178"
+    },
+    "Models/Models.cs|Models.Models.RetrievedChunk": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.RetrievedChunk",
+      "start_line": 9,
+      "end_line": 10,
+      "type": "CLASS",
+      "content_hash": "a1305c77d3973908"
+    },
+    "Models/Models.cs|Models.Models.CollectionStats": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.CollectionStats",
+      "start_line": 10,
+      "end_line": 11,
+      "type": "CLASS",
+      "content_hash": "1f2aab1bc49d326e"
+    },
+    "Models/Models.cs|Models.Models.ExtractedDocument": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.ExtractedDocument",
+      "start_line": 11,
+      "end_line": 12,
+      "type": "CLASS",
+      "content_hash": "2122e3e3af3d49c8"
+    },
+    "Models/Models.cs|Models.Models.UploadDocumentRequest": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.UploadDocumentRequest",
+      "start_line": 15,
+      "end_line": 21,
+      "type": "CLASS",
+      "content_hash": "cf449de338c6a242"
+    },
+    "Models/Models.cs|Models.Models.UploadResponse": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.UploadResponse",
+      "start_line": 21,
+      "end_line": 22,
+      "type": "CLASS",
+      "content_hash": "d24154db431ebb9b"
+    },
+    "Models/Models.cs|Models.Models.IndexedDocument": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.IndexedDocument",
+      "start_line": 22,
+      "end_line": 23,
+      "type": "CLASS",
+      "content_hash": "343380e08898c967"
+    },
+    "Models/Models.cs|Models.Models.DocumentListResponse": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.DocumentListResponse",
+      "start_line": 23,
+      "end_line": 24,
+      "type": "CLASS",
+      "content_hash": "f3239099fddfc98a"
+    },
+    "Models/Models.cs|Models.Models.AskRequest": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.AskRequest",
+      "start_line": 27,
+      "end_line": 35,
+      "type": "CLASS",
+      "content_hash": "612ae25f3e1d646d"
+    },
+    "Models/Models.cs|Models.Models.SourceInfo": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.SourceInfo",
+      "start_line": 35,
+      "end_line": 36,
+      "type": "CLASS",
+      "content_hash": "599d316369c4e240"
+    },
+    "Models/Models.cs|Models.Models.AskResponse": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.AskResponse",
+      "start_line": 36,
+      "end_line": 37,
+      "type": "CLASS",
+      "content_hash": "bac7cb4b002a43b8"
+    },
+    "Models/Models.cs|Models.Models.EvalCase": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.EvalCase",
+      "start_line": 39,
+      "end_line": 49,
+      "type": "CLASS",
+      "content_hash": "202b9ba2b3c3d065"
+    },
+    "Models/Models.cs|Models.Models.EvalCaseResult": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.EvalCaseResult",
+      "start_line": 50,
+      "end_line": 53,
+      "type": "CLASS",
+      "content_hash": "6f7ea8f965ccb691"
+    },
+    "Models/Models.cs|Models.Models.EvalReport": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.EvalReport",
+      "start_line": 54,
+      "end_line": 57,
+      "type": "CLASS",
+      "content_hash": "98b4c3cd1742e2c3"
+    },
+    "Models/Models.cs|Models.Models.EmptyKnowledgeBaseException": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.EmptyKnowledgeBaseException",
+      "start_line": 58,
+      "end_line": 64,
+      "type": "CLASS",
+      "content_hash": "77a622b1cda79f01"
+    },
+    "Models/Models.cs|Models.Models.EmptyKnowledgeBaseException.EmptyKnowledgeBaseException()": {
+      "file_path": "Models/Models.cs",
+      "qualified_name": "Models.Models.EmptyKnowledgeBaseException.EmptyKnowledgeBaseException()",
+      "start_line": 60,
+      "end_line": 64,
+      "type": "CONSTRUCTOR",
+      "content_hash": "d6302a8ca4f31ef1"
+    },
+    "Options/Options.cs|Options.Options.OpenAiOptions": {
+      "file_path": "Options/Options.cs",
+      "qualified_name": "Options.Options.OpenAiOptions",
+      "start_line": 7,
+      "end_line": 16,
+      "type": "CLASS",
+      "content_hash": "ec74fdc887a66c24"
+    },
+    "Options/Options.cs|Options.Options.QdrantOptions": {
+      "file_path": "Options/Options.cs",
+      "qualified_name": "Options.Options.QdrantOptions",
+      "start_line": 17,
+      "end_line": 27,
+      "type": "CLASS",
+      "content_hash": "8511fd866b8b0ff3"
+    },
+    "Options/Options.cs|Options.Options.RagOptions": {
+      "file_path": "Options/Options.cs",
+      "qualified_name": "Options.Options.RagOptions",
+      "start_line": 28,
+      "end_line": 34,
+      "type": "CLASS",
+      "content_hash": "f7ee023379c05daf"
+    }
+  },
+  "components": [
+    {
+      "name": "RAG Pipeline Services",
+      "description": "Core business logic for document extraction, text splitting, embedding generation, vector storage, RAG query processing, and benchmark evaluation.",
+      "key_entities": [
+        {
+          "qualified_name": "Services.IngestionService",
+          "reference_file": "Services/IngestionService.cs",
+          "reference_start_line": 5,
+          "reference_end_line": 30
+        },
+        {
+          "qualified_name": "Services.RagService",
+          "reference_file": "Services/RagService.cs",
+          "reference_start_line": 9,
+          "reference_end_line": 57
+        },
+        {
+          "qualified_name": "Services.VectorStoreService",
+          "reference_file": "Services/VectorStoreService.cs",
+          "reference_start_line": 9,
+          "reference_end_line": 122
+        },
+        {
+          "qualified_name": "Services.EmbeddingService",
+          "reference_file": "Services/EmbeddingService.cs",
+          "reference_start_line": 8,
+          "reference_end_line": 28
+        },
+        {
+          "qualified_name": "Services.EvaluationService",
+          "reference_file": "Services/EvaluationService.cs",
+          "reference_start_line": 10,
+          "reference_end_line": 119
+        },
+        {
+          "qualified_name": "Services.DocumentTextExtractor.DocumentTextExtractor",
+          "reference_file": "Services/DocumentTextExtractor.cs",
+          "reference_start_line": 17,
+          "reference_end_line": 80
+        },
+        {
+          "qualified_name": "Services.RecursiveTextSplitter",
+          "reference_file": "Services/RecursiveTextSplitter.cs",
+          "reference_start_line": 4,
+          "reference_end_line": 83
+        }
+      ],
+      "source_cluster_ids": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "file_methods": [
+        {
+          "file_path": "Services/DocumentTextExtractor.cs",
+          "methods": [
+            "Services.DocumentTextExtractor.IDocumentTextExtractor",
+            "Services.DocumentTextExtractor.IDocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+            "Services.DocumentTextExtractor.DocumentTextExtractor",
+            "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+            "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractPdf(Stream stream)",
+            "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractExcel(Stream stream)",
+            "Services.DocumentTextExtractor.DocumentTextExtractor.DecodeText(byte[] bytes)"
+          ]
+        },
+        {
+          "file_path": "Services/EmbeddingService.cs",
+          "methods": [
+            "Services.EmbeddingService",
+            "Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+            "Services.EmbeddingService.EmbedBatchAsync(IReadOnlyList<string> texts, CancellationToken ctx = default(CancellationToken))"
+          ]
+        },
+        {
+          "file_path": "Services/EvaluationService.cs",
+          "methods": [
+            "Services.EvaluationService",
+            "Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+            "Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)"
+          ]
+        },
+        {
+          "file_path": "Services/IngestionService.cs",
+          "methods": [
+            "Services.IngestionService",
+            "Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)"
+          ]
+        },
+        {
+          "file_path": "Services/RagPrompts.cs",
+          "methods": [
+            "Services.RagPrompts",
+            "Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+            "Services.RagPrompts.BuildUserMessage(string context, string question)",
+            "Services.RagPrompts.IsFallback(string answer)"
+          ]
+        },
+        {
+          "file_path": "Services/RagService.cs",
+          "methods": [
+            "Services.RagService",
+            "Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+            "Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+            "Services.RagService.GenerateAsync(string question, IReadOnlyList<RetrievedChunk> chunks, string model, float temperature, CancellationToken ct)"
+          ]
+        },
+        {
+          "file_path": "Services/RecursiveTextSplitter.cs",
+          "methods": [
+            "Services.RecursiveTextSplitter",
+            "Services.RecursiveTextSplitter.Split(string text, int chunkSize, int overlap)",
+            "Services.RecursiveTextSplitter.SplitRecursive(string text, string[] separators, int chunkSize, int overlap)",
+            "Services.RecursiveTextSplitter.Merge(List<string> splits, string separator, int chunkSize, int overlap)",
+            "Services.RecursiveTextSplitter.AddDoc(List<string> docs, List<string> current, string separator)"
+          ]
+        },
+        {
+          "file_path": "Services/VectorStoreService.cs",
+          "methods": [
+            "Services.VectorStoreService",
+            "Services.VectorStoreService.EnsureCollectionAsync(CancellationToken ct)",
+            "Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+            "Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+            "Services.VectorStoreService.SearchAsync(float[] vector, int topK, CancellationToken ct)",
+            "Services.VectorStoreService.GetStatsAsync(CancellationToken ct)",
+            "Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)"
+          ]
+        }
+      ],
+      "component_id": "1",
+      "can_expand": true,
+      "components": [
+        {
+          "name": "Document Ingestion and Embedding",
+          "description": "Extracts text from uploaded documents, splits it into chunks, and generates vector embeddings for indexing and querying.",
+          "key_entities": [
+            {
+              "qualified_name": "Services.DocumentTextExtractor.DocumentTextExtractor",
+              "reference_file": "Services/DocumentTextExtractor.cs",
+              "reference_start_line": 17,
+              "reference_end_line": 80
+            },
+            {
+              "qualified_name": "Services.RecursiveTextSplitter",
+              "reference_file": "Services/RecursiveTextSplitter.cs",
+              "reference_start_line": 4,
+              "reference_end_line": 83
+            },
+            {
+              "qualified_name": "Services.EmbeddingService",
+              "reference_file": "Services/EmbeddingService.cs",
+              "reference_start_line": 8,
+              "reference_end_line": 28
+            },
+            {
+              "qualified_name": "Services.IngestionService",
+              "reference_file": "Services/IngestionService.cs",
+              "reference_start_line": 5,
+              "reference_end_line": 30
+            }
+          ],
+          "source_cluster_ids": [
+            "1.0",
+            "1.1",
+            "1.3",
+            "1.6"
+          ],
+          "file_methods": [
+            {
+              "file_path": "Services/DocumentTextExtractor.cs",
+              "methods": [
+                "Services.DocumentTextExtractor.IDocumentTextExtractor",
+                "Services.DocumentTextExtractor.IDocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+                "Services.DocumentTextExtractor.DocumentTextExtractor",
+                "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+                "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractPdf(Stream stream)",
+                "Services.DocumentTextExtractor.DocumentTextExtractor.ExtractExcel(Stream stream)",
+                "Services.DocumentTextExtractor.DocumentTextExtractor.DecodeText(byte[] bytes)"
+              ]
+            },
+            {
+              "file_path": "Services/EmbeddingService.cs",
+              "methods": [
+                "Services.EmbeddingService",
+                "Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+                "Services.EmbeddingService.EmbedBatchAsync(IReadOnlyList<string> texts, CancellationToken ctx = default(CancellationToken))"
+              ]
+            },
+            {
+              "file_path": "Services/IngestionService.cs",
+              "methods": [
+                "Services.IngestionService",
+                "Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)"
+              ]
+            },
+            {
+              "file_path": "Services/RecursiveTextSplitter.cs",
+              "methods": [
+                "Services.RecursiveTextSplitter",
+                "Services.RecursiveTextSplitter.Split(string text, int chunkSize, int overlap)",
+                "Services.RecursiveTextSplitter.SplitRecursive(string text, string[] separators, int chunkSize, int overlap)",
+                "Services.RecursiveTextSplitter.Merge(List<string> splits, string separator, int chunkSize, int overlap)",
+                "Services.RecursiveTextSplitter.AddDoc(List<string> docs, List<string> current, string separator)"
+              ]
+            }
+          ],
+          "component_id": "1.1",
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "name": "Vector Storage and Query Generation",
+          "description": "Manages vector store indexing and retrieval in Qdrant, orchestrating prompt synthesis and LLM response generation.",
+          "key_entities": [
+            {
+              "qualified_name": "Services.VectorStoreService",
+              "reference_file": "Services/VectorStoreService.cs",
+              "reference_start_line": 9,
+              "reference_end_line": 122
+            },
+            {
+              "qualified_name": "Services.RagService",
+              "reference_file": "Services/RagService.cs",
+              "reference_start_line": 9,
+              "reference_end_line": 57
+            },
+            {
+              "qualified_name": "Services.RagPrompts",
+              "reference_file": "Services/RagPrompts.cs",
+              "reference_start_line": 5,
+              "reference_end_line": 30
+            }
+          ],
+          "source_cluster_ids": [
+            "1.4",
+            "1.5",
+            "1.7"
+          ],
+          "file_methods": [
+            {
+              "file_path": "Services/RagPrompts.cs",
+              "methods": [
+                "Services.RagPrompts",
+                "Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+                "Services.RagPrompts.BuildUserMessage(string context, string question)",
+                "Services.RagPrompts.IsFallback(string answer)"
+              ]
+            },
+            {
+              "file_path": "Services/RagService.cs",
+              "methods": [
+                "Services.RagService",
+                "Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+                "Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+                "Services.RagService.GenerateAsync(string question, IReadOnlyList<RetrievedChunk> chunks, string model, float temperature, CancellationToken ct)"
+              ]
+            },
+            {
+              "file_path": "Services/VectorStoreService.cs",
+              "methods": [
+                "Services.VectorStoreService",
+                "Services.VectorStoreService.EnsureCollectionAsync(CancellationToken ct)",
+                "Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+                "Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+                "Services.VectorStoreService.SearchAsync(float[] vector, int topK, CancellationToken ct)",
+                "Services.VectorStoreService.GetStatsAsync(CancellationToken ct)",
+                "Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)"
+              ]
+            }
+          ],
+          "component_id": "1.2",
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "name": "RAG Evaluation and Guardrails",
+          "description": "Evaluates RAG retrieval and response quality, scoring faithfulness and guardrail adherence using an LLM judge.",
+          "key_entities": [
+            {
+              "qualified_name": "Services.EvaluationService",
+              "reference_file": "Services/EvaluationService.cs",
+              "reference_start_line": 10,
+              "reference_end_line": 119
+            }
+          ],
+          "source_cluster_ids": [
+            "1.2"
+          ],
+          "file_methods": [
+            {
+              "file_path": "Services/EvaluationService.cs",
+              "methods": [
+                "Services.EvaluationService",
+                "Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+                "Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)"
+              ]
+            }
+          ],
+          "component_id": "1.3",
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "stores indexed embeddings in",
+          "src_name": "Document Ingestion and Embedding",
+          "dst_name": "Vector Storage and Query Generation",
+          "evidence": "",
+          "key_edges": [
+            {
+              "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+              "target": "Services/VectorStoreService.cs|Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+              "call_sites": [
+                {
+                  "line": 25,
+                  "column": 21
+                }
+              ],
+              "description": "IngestionService ensures collection existence, clears existing records, and persists chunk vectors in VectorStoreService"
+            }
+          ],
+          "src_id": "1.1",
+          "dst_id": "1.2",
+          "is_static": true,
+          "all_edges": [
+            {
+              "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+              "target": "Services/VectorStoreService.cs|Services.VectorStoreService",
+              "call_sites": [
+                {
+                  "line": 23,
+                  "column": 21
+                },
+                {
+                  "line": 24,
+                  "column": 21
+                },
+                {
+                  "line": 25,
+                  "column": 21
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+              "target": "Services/VectorStoreService.cs|Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+              "call_sites": [
+                {
+                  "line": 24,
+                  "column": 21
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+              "target": "Services/VectorStoreService.cs|Services.VectorStoreService.EnsureCollectionAsync(CancellationToken ct)",
+              "call_sites": [
+                {
+                  "line": 23,
+                  "column": 21
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+              "target": "Services/VectorStoreService.cs|Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+              "call_sites": [
+                {
+                  "line": 25,
+                  "column": 21
+                }
+              ],
+              "description": ""
+            }
+          ]
+        },
+        {
+          "relation": "embeds queries via",
+          "src_name": "Vector Storage and Query Generation",
+          "dst_name": "Document Ingestion and Embedding",
+          "evidence": "",
+          "key_edges": [
+            {
+              "source": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+              "target": "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+              "call_sites": [
+                {
+                  "line": 30,
+                  "column": 39
+                }
+              ],
+              "description": "RagService generates query embeddings using EmbeddingService prior to similarity search"
+            }
+          ],
+          "src_id": "1.2",
+          "dst_id": "1.1",
+          "is_static": true,
+          "all_edges": [
+            {
+              "source": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+              "target": "Services/EmbeddingService.cs|Services.EmbeddingService",
+              "call_sites": [
+                {
+                  "line": 30,
+                  "column": 39
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+              "target": "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+              "call_sites": [
+                {
+                  "line": 30,
+                  "column": 39
+                }
+              ],
+              "description": ""
+            }
+          ]
+        },
+        {
+          "relation": "evaluates against prompt contexts and fallbacks in",
+          "src_name": "RAG Evaluation and Guardrails",
+          "dst_name": "Vector Storage and Query Generation",
+          "evidence": "",
+          "key_edges": [
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)",
+              "target": "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)",
+              "call_sites": [
+                {
+                  "line": 114,
+                  "column": 31
+                }
+              ],
+              "description": "EvaluationService checks if the generated answer is a refusal fallback response"
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+              "target": "Services/RagPrompts.cs|Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+              "call_sites": [
+                {
+                  "line": 70,
+                  "column": 63
+                }
+              ],
+              "description": "EvaluationService queries RagPrompts to format context and check fallback responses during test case evaluation"
+            }
+          ],
+          "src_id": "1.3",
+          "dst_id": "1.2",
+          "is_static": true,
+          "all_edges": [
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)",
+              "target": "Services/RagPrompts.cs|Services.RagPrompts",
+              "call_sites": [
+                {
+                  "line": 114,
+                  "column": 31
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)",
+              "target": "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)",
+              "call_sites": [
+                {
+                  "line": 114,
+                  "column": 31
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+              "target": "Services/RagPrompts.cs|Services.RagPrompts",
+              "call_sites": [
+                {
+                  "line": 62,
+                  "column": 42
+                },
+                {
+                  "line": 70,
+                  "column": 63
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+              "target": "Services/RagPrompts.cs|Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+              "call_sites": [
+                {
+                  "line": 70,
+                  "column": 63
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+              "target": "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)",
+              "call_sites": [
+                {
+                  "line": 62,
+                  "column": 42
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+              "target": "Services/RagService.cs|Services.RagService",
+              "call_sites": [
+                {
+                  "line": 40,
+                  "column": 36
+                },
+                {
+                  "line": 57,
+                  "column": 36
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+              "target": "Services/RagService.cs|Services.RagService.GenerateAsync(string question, IReadOnlyList<RetrievedChunk> chunks, string model, float temperature, CancellationToken ct)",
+              "call_sites": [
+                {
+                  "line": 57,
+                  "column": 36
+                }
+              ],
+              "description": ""
+            },
+            {
+              "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+              "target": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+              "call_sites": [
+                {
+                  "line": 40,
+                  "column": 36
+                }
+              ],
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "API Controllers",
+      "description": "ASP.NET Core API controllers exposing HTTP endpoints for document ingestion, question answering, and evaluation workflows.",
+      "key_entities": [
+        {
+          "qualified_name": "Controllers.DocumentsController",
+          "reference_file": "Controllers/DocumentsController.cs",
+          "reference_start_line": 9,
+          "reference_end_line": 55
+        },
+        {
+          "qualified_name": "Controllers.QuestionsController",
+          "reference_file": "Controllers/QuestionsController.cs",
+          "reference_start_line": 9,
+          "reference_end_line": 29
+        },
+        {
+          "qualified_name": "Controllers.EvaluationController",
+          "reference_file": "Controllers/EvaluationController.cs",
+          "reference_start_line": 9,
+          "reference_end_line": 19
+        }
+      ],
+      "source_cluster_ids": [
+        "0",
+        "1",
+        "2"
+      ],
+      "file_methods": [
+        {
+          "file_path": "Controllers/DocumentsController.cs",
+          "methods": [
+            "Controllers.DocumentsController",
+            "Controllers.DocumentsController.Upload(UploadDocumentRequest request, CancellationToken ct)",
+            "Controllers.DocumentsController.List(CancellationToken ct)",
+            "Controllers.DocumentsController.Delete(string documentId, CancellationToken ct)"
+          ]
+        },
+        {
+          "file_path": "Controllers/EvaluationController.cs",
+          "methods": [
+            "Controllers.EvaluationController",
+            "Controllers.EvaluationController.Run(List<EvalCase> cases, int topK = 5, CancellationToken ct = default(CancellationToken))"
+          ]
+        },
+        {
+          "file_path": "Controllers/QuestionsController.cs",
+          "methods": [
+            "Controllers.QuestionsController",
+            "Controllers.QuestionsController.Ask(AskRequest request, CancellationToken ct)"
+          ]
+        }
+      ],
+      "component_id": "2",
+      "can_expand": false,
+      "components": [],
+      "components_relations": []
+    },
+    {
+      "name": "Models and Options",
+      "description": "Data transfer objects, domain records, exceptions, and configuration option schemas for OpenAI, Qdrant, and RAG pipelines.",
+      "key_entities": [
+        {
+          "qualified_name": "Models.Models.UploadDocumentRequest",
+          "reference_file": "Models/Models.cs",
+          "reference_start_line": 15,
+          "reference_end_line": 21
+        },
+        {
+          "qualified_name": "Models.Models.UploadResponse",
+          "reference_file": "Models/Models.cs",
+          "reference_start_line": 21,
+          "reference_end_line": 22
+        },
+        {
+          "qualified_name": "Models.Models.AskRequest",
+          "reference_file": "Models/Models.cs",
+          "reference_start_line": 27,
+          "reference_end_line": 35
+        },
+        {
+          "qualified_name": "Models.Models.AskResponse",
+          "reference_file": "Models/Models.cs",
+          "reference_start_line": 36,
+          "reference_end_line": 37
+        },
+        {
+          "qualified_name": "Models.Models.EvalCase",
+          "reference_file": "Models/Models.cs",
+          "reference_start_line": 39,
+          "reference_end_line": 49
+        },
+        {
+          "qualified_name": "Models.Models.EvalReport",
+          "reference_file": "Models/Models.cs",
+          "reference_start_line": 54,
+          "reference_end_line": 57
+        },
+        {
+          "qualified_name": "Options.Options.OpenAiOptions",
+          "reference_file": "Options/Options.cs",
+          "reference_start_line": 7,
+          "reference_end_line": 16
+        },
+        {
+          "qualified_name": "Options.Options.QdrantOptions",
+          "reference_file": "Options/Options.cs",
+          "reference_start_line": 17,
+          "reference_end_line": 27
+        },
+        {
+          "qualified_name": "Options.Options.RagOptions",
+          "reference_file": "Options/Options.cs",
+          "reference_start_line": 28,
+          "reference_end_line": 34
+        }
+      ],
+      "source_cluster_ids": [
+        "3",
+        "4"
+      ],
+      "file_methods": [
+        {
+          "file_path": "Models/Models.cs",
+          "methods": [
+            "Models.Models.RetrievedChunk",
+            "Models.Models.CollectionStats",
+            "Models.Models.ExtractedDocument",
+            "Models.Models.UploadDocumentRequest",
+            "Models.Models.UploadResponse",
+            "Models.Models.IndexedDocument",
+            "Models.Models.DocumentListResponse",
+            "Models.Models.AskRequest",
+            "Models.Models.SourceInfo",
+            "Models.Models.AskResponse",
+            "Models.Models.EvalCase",
+            "Models.Models.EvalCaseResult",
+            "Models.Models.EvalReport",
+            "Models.Models.EmptyKnowledgeBaseException",
+            "Models.Models.EmptyKnowledgeBaseException.EmptyKnowledgeBaseException()"
+          ]
+        },
+        {
+          "file_path": "Options/Options.cs",
+          "methods": [
+            "Options.Options.OpenAiOptions",
+            "Options.Options.QdrantOptions",
+            "Options.Options.RagOptions"
+          ]
+        }
+      ],
+      "component_id": "3",
+      "can_expand": false,
+      "components": [],
+      "components_relations": []
+    }
+  ],
+  "components_relations": [
+    {
+      "relation": "stores indexed embeddings in",
+      "src_name": "Document Ingestion and Embedding",
+      "dst_name": "Vector Storage and Query Generation",
+      "evidence": "",
+      "key_edges": [
+        {
+          "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 25,
+              "column": 21
+            }
+          ],
+          "description": "IngestionService ensures collection existence, clears existing records, and persists chunk vectors in VectorStoreService"
+        }
+      ],
+      "src_id": "1.1",
+      "dst_id": "1.2",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService",
+          "call_sites": [
+            {
+              "line": 23,
+              "column": 21
+            },
+            {
+              "line": 24,
+              "column": 21
+            },
+            {
+              "line": 25,
+              "column": 21
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 24,
+              "column": 21
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.EnsureCollectionAsync(CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 23,
+              "column": 21
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.UpsertChunksAsync(string documentId, string sourceType, IReadOnlyList<string> chunks, IReadOnlyList<float[]> vectors, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 25,
+              "column": 21
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "uses data models and options",
+      "src_name": "Document Ingestion and Embedding",
+      "dst_name": "Models and Options",
+      "evidence": "",
+      "key_edges": [
+        {
+          "source": "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+          "target": "Models/Models.cs|Models.Models.ExtractedDocument",
+          "call_sites": [
+            {
+              "line": 30,
+              "column": 19
+            },
+            {
+              "line": 32,
+              "column": 19
+            }
+          ],
+          "description": "Document text extractor constructs ExtractedDocument DTOs during parsing"
+        },
+        {
+          "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.UploadResponse",
+          "call_sites": [
+            {
+              "line": 28,
+              "column": 20
+            }
+          ],
+          "description": "Ingestion service returns an UploadResponse after indexing extracted chunks"
+        }
+      ],
+      "src_id": "1.1",
+      "dst_id": "3",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractAsync(IFormFile file, CancellationToken ctx)",
+          "target": "Models/Models.cs|Models.Models.ExtractedDocument",
+          "call_sites": [
+            {
+              "line": 30,
+              "column": 19
+            },
+            {
+              "line": 32,
+              "column": 19
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/DocumentTextExtractor.cs|Services.DocumentTextExtractor.DocumentTextExtractor.ExtractExcel(Stream stream)",
+          "target": "Models/Models.cs|Models.Models.ExtractedDocument",
+          "call_sites": [
+            {
+              "line": 71,
+              "column": 24
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.UploadResponse",
+          "call_sites": [
+            {
+              "line": 28,
+              "column": 20
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "embeds queries via",
+      "src_name": "Vector Storage and Query Generation",
+      "dst_name": "Document Ingestion and Embedding",
+      "evidence": "",
+      "key_edges": [
+        {
+          "source": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+          "target": "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+          "call_sites": [
+            {
+              "line": 30,
+              "column": 39
+            }
+          ],
+          "description": "RagService generates query embeddings using EmbeddingService prior to similarity search"
+        }
+      ],
+      "src_id": "1.2",
+      "dst_id": "1.1",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+          "target": "Services/EmbeddingService.cs|Services.EmbeddingService",
+          "call_sites": [
+            {
+              "line": 30,
+              "column": 39
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+          "target": "Services/EmbeddingService.cs|Services.EmbeddingService.EmbedAsync(string text, CancellationToken ctx = default(CancellationToken))",
+          "call_sites": [
+            {
+              "line": 30,
+              "column": 39
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "uses data models and options",
+      "src_name": "Vector Storage and Query Generation",
+      "dst_name": "Models and Options",
+      "evidence": "",
+      "key_edges": [],
+      "src_id": "1.2",
+      "dst_id": "3",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Services/RagService.cs|Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.AskResponse",
+          "call_sites": [
+            {
+              "line": 25,
+              "column": 20
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/RagService.cs|Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.EmptyKnowledgeBaseException",
+          "call_sites": [
+            {
+              "line": 16,
+              "column": 47
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/RagService.cs|Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.EmptyKnowledgeBaseException.EmptyKnowledgeBaseException()",
+          "call_sites": [
+            {
+              "line": 16,
+              "column": 47
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/RagService.cs|Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.SourceInfo",
+          "call_sites": [
+            {
+              "line": 21,
+              "column": 51
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/VectorStoreService.cs|Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.IndexedDocument",
+          "call_sites": [
+            {
+              "line": 119,
+              "column": 38
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/VectorStoreService.cs|Services.VectorStoreService.GetStatsAsync(CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.CollectionStats",
+          "call_sites": [
+            {
+              "line": 91,
+              "column": 24
+            },
+            {
+              "line": 93,
+              "column": 20
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/VectorStoreService.cs|Services.VectorStoreService.SearchAsync(float[] vector, int topK, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.RetrievedChunk",
+          "call_sites": [
+            {
+              "line": 82,
+              "column": 37
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "evaluates against prompt contexts and fallbacks in",
+      "src_name": "RAG Evaluation and Guardrails",
+      "dst_name": "Vector Storage and Query Generation",
+      "evidence": "",
+      "key_edges": [
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)",
+          "target": "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)",
+          "call_sites": [
+            {
+              "line": 114,
+              "column": 31
+            }
+          ],
+          "description": "EvaluationService checks if the generated answer is a refusal fallback response"
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Services/RagPrompts.cs|Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+          "call_sites": [
+            {
+              "line": 70,
+              "column": 63
+            }
+          ],
+          "description": "EvaluationService queries RagPrompts to format context and check fallback responses during test case evaluation"
+        }
+      ],
+      "src_id": "1.3",
+      "dst_id": "1.2",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)",
+          "target": "Services/RagPrompts.cs|Services.RagPrompts",
+          "call_sites": [
+            {
+              "line": 114,
+              "column": 31
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.JudgeAsync(string context, string question, string answer, CancellationToken ct)",
+          "target": "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)",
+          "call_sites": [
+            {
+              "line": 114,
+              "column": 31
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Services/RagPrompts.cs|Services.RagPrompts",
+          "call_sites": [
+            {
+              "line": 62,
+              "column": 42
+            },
+            {
+              "line": 70,
+              "column": 63
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Services/RagPrompts.cs|Services.RagPrompts.BuildContext(IReadOnlyList<RetrievedChunk> chunks)",
+          "call_sites": [
+            {
+              "line": 70,
+              "column": 63
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Services/RagPrompts.cs|Services.RagPrompts.IsFallback(string answer)",
+          "call_sites": [
+            {
+              "line": 62,
+              "column": 42
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Services/RagService.cs|Services.RagService",
+          "call_sites": [
+            {
+              "line": 40,
+              "column": 36
+            },
+            {
+              "line": 57,
+              "column": 36
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Services/RagService.cs|Services.RagService.GenerateAsync(string question, IReadOnlyList<RetrievedChunk> chunks, string model, float temperature, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 57,
+              "column": 36
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Services/RagService.cs|Services.RagService.RetrieveAsync(string question, int topK, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 40,
+              "column": 36
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "uses data models and options",
+      "src_name": "RAG Evaluation and Guardrails",
+      "dst_name": "Models and Options",
+      "evidence": "",
+      "key_edges": [
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.EvalReport",
+          "call_sites": [
+            {
+              "line": 83,
+              "column": 20
+            }
+          ],
+          "description": "Evaluation service aggregates evaluation cases into an EvalReport result"
+        }
+      ],
+      "src_id": "1.3",
+      "dst_id": "3",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.EvalCaseResult",
+          "call_sites": [
+            {
+              "line": 73,
+              "column": 29
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.EvalReport",
+          "call_sites": [
+            {
+              "line": 83,
+              "column": 20
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "delegates operations to",
+      "src_name": "API Controllers",
+      "dst_name": "Document Ingestion and Embedding",
+      "evidence": "",
+      "key_edges": [],
+      "src_id": "2",
+      "dst_id": "1.1",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.Upload(UploadDocumentRequest request, CancellationToken ct)",
+          "target": "Services/IngestionService.cs|Services.IngestionService",
+          "call_sites": [
+            {
+              "line": 31,
+              "column": 39
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.Upload(UploadDocumentRequest request, CancellationToken ct)",
+          "target": "Services/IngestionService.cs|Services.IngestionService.IngestAsync(IFormFile file, int chunkSize, int overlap, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 31,
+              "column": 39
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "delegates operations to",
+      "src_name": "API Controllers",
+      "dst_name": "Vector Storage and Query Generation",
+      "evidence": "",
+      "key_edges": [
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.Delete(string documentId, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 52,
+              "column": 21
+            }
+          ],
+          "description": "Documents controller calls vector store to delete document chunks"
+        },
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 44,
+              "column": 32
+            }
+          ],
+          "description": "Documents controller queries vector store for indexed documents and collection statistics"
+        }
+      ],
+      "src_id": "2",
+      "dst_id": "1.2",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.Delete(string documentId, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService",
+          "call_sites": [
+            {
+              "line": 52,
+              "column": 21
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.Delete(string documentId, CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.DeleteDocumentAsync(string documentId, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 52,
+              "column": 21
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService",
+          "call_sites": [
+            {
+              "line": 43,
+              "column": 33
+            },
+            {
+              "line": 44,
+              "column": 32
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.GetIndexedDocumentsAsync(CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 44,
+              "column": 32
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)",
+          "target": "Services/VectorStoreService.cs|Services.VectorStoreService.GetStatsAsync(CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 43,
+              "column": 33
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/QuestionsController.cs|Controllers.QuestionsController.Ask(AskRequest request, CancellationToken ct)",
+          "target": "Services/RagService.cs|Services.RagService",
+          "call_sites": [
+            {
+              "line": 18,
+              "column": 33
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/QuestionsController.cs|Controllers.QuestionsController.Ask(AskRequest request, CancellationToken ct)",
+          "target": "Services/RagService.cs|Services.RagService.AskAsync(AskRequest req, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 18,
+              "column": 33
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "delegates operations to",
+      "src_name": "API Controllers",
+      "dst_name": "RAG Evaluation and Guardrails",
+      "evidence": "",
+      "key_edges": [],
+      "src_id": "2",
+      "dst_id": "1.3",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Controllers/EvaluationController.cs|Controllers.EvaluationController.Run(List<EvalCase> cases, int topK = 5, CancellationToken ct = default(CancellationToken))",
+          "target": "Services/EvaluationService.cs|Services.EvaluationService",
+          "call_sites": [
+            {
+              "line": 17,
+              "column": 33
+            }
+          ],
+          "description": ""
+        },
+        {
+          "source": "Controllers/EvaluationController.cs|Controllers.EvaluationController.Run(List<EvalCase> cases, int topK = 5, CancellationToken ct = default(CancellationToken))",
+          "target": "Services/EvaluationService.cs|Services.EvaluationService.RunAsync(IReadOnlyList<EvalCase> cases, int topK, CancellationToken ct)",
+          "call_sites": [
+            {
+              "line": 17,
+              "column": 33
+            }
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "relation": "uses request and response models",
+      "src_name": "API Controllers",
+      "dst_name": "Models and Options",
+      "evidence": "",
+      "key_edges": [
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.DocumentListResponse",
+          "call_sites": [
+            {
+              "line": 45,
+              "column": 20
+            }
+          ],
+          "description": "Documents controller constructs and returns DocumentListResponse responses"
+        }
+      ],
+      "src_id": "2",
+      "dst_id": "3",
+      "is_static": true,
+      "all_edges": [
+        {
+          "source": "Controllers/DocumentsController.cs|Controllers.DocumentsController.List(CancellationToken ct)",
+          "target": "Models/Models.cs|Models.Models.DocumentListResponse",
+          "call_sites": [
+            {
+              "line": 45,
+              "column": 20
+            }
+          ],
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
