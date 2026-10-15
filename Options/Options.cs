@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace RagApi.Options;
@@ -7,11 +7,12 @@ namespace RagApi.Options;
 public class OpenAiOptions
 {
     public const string Section = "OpenAI";
-    [Required] public string ApiKey { get; set; } = "";
-    public string EmbeddingModel { get; set; } = "text-embedding-3-small";
-    public string ChatModel { get; set; } = "gpt-4o-mini";
-    public string JudgeModel { get; set; } = "gpt-4o-mini";
-    public string[] AllowedChatModels { get; set; } = { "gpt-4o-mini", "gpt-4o" };
+    public string ApiKey { get; set; } = "ollama";
+    public string? Endpoint { get; set; } = "http://localhost:11434/v1";
+    public string EmbeddingModel { get; set; } = "nomic-embed-text";
+    public string ChatModel { get; set; } = "llama3.2";
+    public string JudgeModel { get; set; } = "llama3.2";
+    public string[] AllowedChatModels { get; set; } = { "llama3.2", "llama3.1", "gpt-4o-mini", "gpt-4o" };
 }
 
 public class QdrantOptions
@@ -20,9 +21,9 @@ public class QdrantOptions
     [Required] public string Host { get; set; } = "";
     public int Port { get; set; } = 6334;
     public bool UseHttps { get; set; } = true;
-    [Required] public string ApiKey { get; set; } = "";
-    [Required] public string CollectionName { get; set; } = "rag_dotnet";
-    public int VectorSize { get; set; } = 1536;
+    public string? ApiKey { get; set; } = "";
+    [Required] public string CollectionName { get; set; } = "rag_local";
+    public int VectorSize { get; set; } = 768;
 }
 
 public class RagOptions

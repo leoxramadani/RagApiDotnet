@@ -24,7 +24,7 @@ public class EvaluationService(
 
         Task:
         Determine if every factual claim in the [GENERATED ANSWER] is directly supported by the [RETRIEVED CONTEXT].
-        If the answer says "Nuk kam informacion për këtë në dokumentet e ngarkuara." and context indeed lacks answer, mark it as faithful (1.0).
+        If the answer says "I do not have any information about this question in the stored documents." and context indeed lacks answer, mark it as faithful (1.0).
         If the answer introduces claims, facts, or assumptions not found anywhere in the context, mark it unfaithful (0.0).
 
         Return your response strictly in the following JSON format:

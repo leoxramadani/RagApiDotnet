@@ -18,7 +18,16 @@ builder.Services.AddOptions<RagOptions>()
 // Add services to the container.
 
 builder.Services.AddSingleton(sp =>
-    new OpenAIClient(sp.GetRequiredService<IOptions<OpenAiOptions>>().Value.ApiKey));
+{
+    var opt = sp.GetRequiredService<IOptions<OpenAiOptions>>().Value;
+    if (!string.IsNullOrWhiteSpace(opt.Endpoint) && Uri.TryCreate(opt.Endpoint, UriKind.Absolute, out var endpointUri))
+    {
+        var clientOptions = new OpenAIClientOptions { Endpoint = endpointUri };
+        var key = string.IsNullOrWhiteSpace(opt.ApiKey) ? "ollama" : opt.ApiKey;
+        return new OpenAIClient(new System.ClientModel.ApiKeyCredential(key), clientOptions);
+    }
+    return new OpenAIClient(opt.ApiKey);
+});
 builder.Services.AddSingleton(sp =>
 {
     var q = sp.GetRequiredService<IOptions<QdrantOptions>>().Value;
